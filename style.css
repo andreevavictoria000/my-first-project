@@ -42,9 +42,8 @@ background-color: rgba(248, 248, 248, 1);
   justify-content: space-between;
   align-items: center;
   width: 100%; 
-  max-width: 100%;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 } 
 
@@ -93,6 +92,18 @@ max-width: 100%;
 box-sizing: border-box;
 }
 
+.menu__button {
+width: auto;
+height: 40px;
+padding-left: 10px;
+padding-right: 10px; 
+font-size: 15px;
+color: rgba(126, 126, 130, 1);
+background: none;
+outline: none;
+border: none; 
+} 
+
 .main__image {
 width: 320px;
 height: 176px;
@@ -101,13 +112,18 @@ height: 176px;
 
 
 /* Мобильная версия */
-@media (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .header__icon-call,
   .header__icon-chat,
   .header__icon-profile,
   .header__button-text,
   .desktop-header {
     display: none;
+  }
+
+  .header__container, 
+  .main__container {
+   max-width: 320px; 
   }
 
   .divider__second {
@@ -202,19 +218,6 @@ height: 176px;
 
 }
 
-.menu__button {
-width: auto;
-height: 40px;
-padding-left: 10px;
-padding-right: 10px; 
-font-size: 15px;
-color: rgba(126, 126, 130, 1);
-background: none;
-outline: none;
-border: none; 
- 
-} 
-
 .menu__item-second { order: -2; } 
 
  .menu__button-second {
@@ -261,9 +264,22 @@ font-weight: 100;
 }
 
 
-/* Лэптоп */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* Планшет */
+@media (min-width: 768px) and (max-width: 1119px) {
+
+
+  .desktop-header {
+    display: none; 
+    border-bottom: 1px solid rgba(217, 255, 245, 1);
+    background-color: rgba(248, 248, 248, 1);
+  }
+ 
   
+.header__container, 
+  .main__container {
+   max-width: 768px; 
+  }
+
 
   .header__button-text,
   .desktop-header {
@@ -381,19 +397,6 @@ font-weight: 100;
 
 }
 
-.menu__button {
-width: auto;
-height: 40px;
-padding-left: 10px;
-padding-right: 10px; 
-font-size: 15px;
-color: rgba(126, 126, 130, 1);
-background: none;
-outline: none;
-border: none; 
- 
-} 
-
 .menu__item-second { order: -4; } 
 
  .menu__button-second {
@@ -421,7 +424,6 @@ border: none;
   margin-bottom: 25px;
   margin-right: 16px;
   margin-left: 16px;
-
 }
 
 .expand {
@@ -456,8 +458,8 @@ width: 360px;
 height: 208px;
 margin-top: 20px;
 }
-
-}
+ 
+} 
 
 /* Десктоп */
 @media (min-width: 1120px) {
@@ -475,6 +477,11 @@ margin-top: 20px;
   .main__title,
   .highlight  {  
     display: none;
+  }
+
+  .desktop-header__container, 
+  .main__container { 
+   max-width: 1120px; 
   }
 
   .desktop-header {
@@ -574,26 +581,11 @@ margin-right: 35px;
   padding: 0 35px;
 } 
 
-
-.menu__button {
-width: auto;
-height: 40px;
-padding: 0 10px;
-font-size: 15px;
-color: rgba(126, 126, 130, 1);
-background: none;
-outline: none;
-border: none; 
-white-space: nowrap;  
-} 
-
-
 .menu__button-sixth,
 .menu__item-sixth {
   display: none !important;
   width: 0 !important;
   margin: 0 !important;
-  padding: 0 !important;
   visibility: hidden !important;
 } 
 
